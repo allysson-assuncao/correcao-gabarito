@@ -1,12 +1,28 @@
-package com.example.backend.controllers;
+package com.example.backend.controller;
 
 import com.example.backend.dto.LoginRequestDTO;
 import com.example.backend.dto.RegisterRequestDTO;
 import com.example.backend.infra.security.TokenService;
 import com.example.backend.model.User;
+import com.example.backend.repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
+import org.springframework.test.web.servlet.MockMvc;
+
+import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.any;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+
 
 import java.util.Optional;
 
@@ -17,7 +33,7 @@ public class TestsController {
     private MockMvc mockMvc;
 
     @Mock
-    private User user;
+    private UserRepository user;
 
     @Mock
     private TokenService tokenService;
@@ -85,7 +101,7 @@ public class TestsController {
                 .andExpect(status().isBadRequest());
     }
 
-    @WithMockUser // Usar um usuário simulado para acessar o endpoint protegido
+    @WithMockUser
     @Test
     void testAuthenticatedEndpoint() throws Exception {
         mockMvc.perform(get("/test"))
@@ -94,3 +110,4 @@ public class TestsController {
     }
 
 }
+

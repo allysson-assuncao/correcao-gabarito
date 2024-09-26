@@ -22,6 +22,12 @@ public class User /*implements UserDetails*/ {
     private String email;
     private String username;
     private String password;
+
+    public User(String mail, String passwordHash, String testUser) {
+        this.email = email;
+        this.username = username;
+        this.password = password;
+    }
     /*private UserRole role;
 
     @Override
@@ -57,3 +63,4 @@ public class User /*implements UserDetails*/ {
         return true;
     }*/
 }
+

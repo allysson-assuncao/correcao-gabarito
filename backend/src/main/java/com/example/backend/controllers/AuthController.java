@@ -5,7 +5,7 @@ import com.example.backend.dto.LoginRequestDTO;
 import com.example.backend.dto.RegisterRequestDTO;
 import com.example.backend.infra.security.TokenService;
 import com.example.backend.model.User;
-import com.example.backend.repositories.UserRepository;
+import com.example.backend.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;

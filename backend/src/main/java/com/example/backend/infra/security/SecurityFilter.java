@@ -1,7 +1,7 @@
 package com.example.backend.infra.security;
 
 import com.example.backend.model.User;
-import com.example.backend.repositories.UserRepository;
+import com.example.backend.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -63,4 +63,3 @@ public class SecurityFilter extends OncePerRequestFilter {
         return token.replace("Bearer ", "");
     }
 }
-
