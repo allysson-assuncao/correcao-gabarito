@@ -15,14 +15,14 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User implements UserDetails {
+public class User /*implements UserDetails*/ {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
     private String email;
     private String username;
     private String password;
-    private UserRole role;
+    /*private UserRole role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -55,5 +55,5 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
-    }
+    }*/
 }
