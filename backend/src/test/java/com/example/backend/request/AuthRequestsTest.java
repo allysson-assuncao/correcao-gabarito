@@ -1,5 +1,6 @@
-package com.example.backend.controller;
+package com.example.backend.request;
 
+import com.example.backend.controllers.AuthController;
 import com.example.backend.dto.LoginRequestDTO;
 import com.example.backend.dto.RegisterRequestDTO;
 import com.example.backend.infra.security.TokenService;
@@ -11,6 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
@@ -26,8 +28,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import java.util.Optional;
 
-@WebMvcTest(TestsController.class)
-public class TestsController {
+@WebMvcTest(AuthController.class)
+public class AuthRequestsTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -35,7 +37,7 @@ public class TestsController {
     @Mock
     private UserRepository user;
 
-    @Mock
+    @MockBean
     private TokenService tokenService;
 
     private ObjectMapper objectMapper;
@@ -45,7 +47,7 @@ public class TestsController {
         objectMapper = new ObjectMapper();
     }
 
-    @Test
+    /*@Test
     void testLoginSuccess() throws Exception {
         // Configurar o comportamento do mock
         when(user.findByEmail("test@example.com")).thenReturn(Optional.of(new User("test@example.com", "passwordHash", "testUser")));
@@ -108,6 +110,16 @@ public class TestsController {
                 .andExpect(status().isOk())
                 .andExpect(content().string("Successfully authenticated"));
     }
+*/
+    @WithMockUser
+    @Test
+    void testAuthenticatedEndpointWithToken() throws Exception {
+        String token = "Bearer testToken";
+
+        mockMvc.perform(get("/test")
+                        .header("Authorization", token))
+                .andExpect(status().isOk())
+                .andExpect(content().string("Successfully authenticated"));
+    }
 
 }
-

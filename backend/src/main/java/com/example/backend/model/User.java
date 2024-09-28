@@ -9,13 +9,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Table(name = "users")
+@Table(name = "_users")
 @Entity
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User /*implements UserDetails*/ {
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
@@ -28,7 +28,7 @@ public class User /*implements UserDetails*/ {
         this.username = username;
         this.password = password;
     }
-    /*private UserRole role;
+    private UserRole role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -61,6 +61,6 @@ public class User /*implements UserDetails*/ {
     @Override
     public boolean isEnabled() {
         return true;
-    }*/
+    }
 }
 
