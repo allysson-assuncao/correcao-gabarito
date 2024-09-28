@@ -12,7 +12,6 @@ const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 export const useThemeContext = () => useContext(ThemeContext);
 
-// needs some change
 export const ThemeContextProvider: React.FC = ({ children }) => {
     const [themeMode, setThemeMode] = useState<'light' | 'dark'>('light');
     const [primaryColor, setPrimaryColor] = useState('#1976d2');
