@@ -3,6 +3,8 @@ package com.example.backend.service;
 import com.example.backend.dto.AuthResponseDTO;
 import com.example.backend.dto.LoginRequestDTO;
 import com.example.backend.dto.RegisterRequestDTO;
+import com.example.backend.exceptions.InvalidCredentialsException;
+import com.example.backend.exceptions.UserNotFoundException;
 import com.example.backend.infra.security.TokenService;
 import com.example.backend.model.User;
 import com.example.backend.repository.UserRepository;
@@ -45,12 +47,13 @@ public class AuthService {
     }
 
     public Optional<AuthResponseDTO> login(LoginRequestDTO loginRequestDTO) {
-        User user = this.userRepository.findByEmail(loginRequestDTO.email()).orElseThrow(() -> new RuntimeException("User not found"));
+        User user = this.userRepository.findByEmail(loginRequestDTO.email()).orElseThrow(() -> new UserNotFoundException("User with email " + loginRequestDTO.email() + " not found"));
         if(this.passwordEncoder.matches(loginRequestDTO.password(), user.getPassword())) {
             String token = this.tokenService.generateToken(user);
             return Optional.of(new AuthResponseDTO(user.getUsername(), token));
         }
-        return Optional.empty();
+        throw new InvalidCredentialsException("Invalid credentials");
+        /*return Optional.empty();*/
     }
 
 }
