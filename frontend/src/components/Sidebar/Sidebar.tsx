@@ -1,10 +1,9 @@
-/*
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState, useAppDispatch } from '@/store';
 import { setTheme, setPrimaryColor } from '@/store/slices/themeSlice';
-import { Switch } from '@shadcn/ui';
 import { HexColorPicker } from 'react-colorful';
+import {Switch} from "@radix-ui/react-switch";
 
 const Sidebar: React.FC = () => {
     const dispatch = useAppDispatch();
@@ -45,4 +44,3 @@ const Sidebar: React.FC = () => {
 };
 
 export default Sidebar;
-*/

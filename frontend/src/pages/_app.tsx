@@ -21,7 +21,7 @@ const MyAppContent = ({ Component, pageProps }: AppProps) => {
     return (
         <>
             <Sidebar />
-            <div className="ml-64 p-4"> {/* Ajuste o padding conforme necessário */}
+            <div className="ml-64 p-4"> {/* Adjust padding */}
                 <Component {...pageProps} />
             </div>
         </>

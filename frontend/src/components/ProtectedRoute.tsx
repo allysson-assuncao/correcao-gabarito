@@ -8,7 +8,7 @@ interface ProtectedRouteProps {
 }
 
 const ProtectedRoute = (WrappedComponent: React.ComponentType, options?: ProtectedRouteProps) => {
-    return (props: any) => {
+    const AuthComponent = (props: any) => {
         const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
         const userRole = useSelector((state: RootState) => state.auth.userRole);
         const router = useRouter();
@@ -22,11 +22,14 @@ const ProtectedRoute = (WrappedComponent: React.ComponentType, options?: Protect
         }, [isAuthenticated, userRole, router, options]);
 
         if (!isAuthenticated || (options?.requiredRole && userRole !== options.requiredRole)) {
-            return null; // Change to a loading component
+            return null; // Replace with a loading component
         }
 
         return <WrappedComponent {...props} />;
     };
+
+    return AuthComponent;
 };
 
 export default ProtectedRoute;
+
