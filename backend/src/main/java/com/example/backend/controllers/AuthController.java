@@ -20,7 +20,7 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/login")
-    public ResponseEntity login(@RequestBody /*@Valid*/ LoginRequestDTO loginRequestDTO){
+    public ResponseEntity<AuthResponseDTO> login(@RequestBody /*@Valid*/ LoginRequestDTO loginRequestDTO){
         Optional<AuthResponseDTO> optionalAuthResponseDTO = this.authService.login(loginRequestDTO);
         return optionalAuthResponseDTO.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.badRequest().build());
         /*if(optionalAuthResponseDTO.isPresent()){

@@ -59,7 +59,7 @@ public class AuthRequestsTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("testUser"))
+                .andExpect(jsonPath("$.username").value("testUser"))
                 .andExpect(jsonPath("$.token").value("testToken"));
     }
 
@@ -87,7 +87,7 @@ public class AuthRequestsTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(request)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.name").value("testUser"))
+                .andExpect(jsonPath("$.username").value("testUser"))
                 .andExpect(jsonPath("$.token").value("testToken"));
     }
 

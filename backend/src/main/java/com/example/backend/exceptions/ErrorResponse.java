@@ -13,4 +13,3 @@ public class ErrorResponse {
     private String errorCode;
     private LocalDateTime timestamp;
 }
-
