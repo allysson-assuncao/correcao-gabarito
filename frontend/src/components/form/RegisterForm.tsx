@@ -1,48 +1,44 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { registerSchema } from '@/utils/authValidation';
 import { useMutation } from 'react-query';
-import { useRouter } from 'next/router';
-import {registerUser} from "@/api/auth";
+import { register as registerService } from '../../services/authService';
 
-interface RegisterFormInputs {
+interface RegisterFormData {
     username: string;
     email: string;
     password: string;
     role: string;
 }
 
-const RegisterForm: React.FC = () => {
-    const { register, handleSubmit } = useForm<RegisterFormInputs>();
-    const router = useRouter();
-
-    const mutation = useMutation(registerUser, {
-        onSuccess: () => {
-            router.push('/login');
-        },
-        onError: () => {
-            alert('Erro ao registrar');
-        },
+const RegisterForm = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm<RegisterFormData>({
+        resolver: zodResolver(registerSchema),
     });
 
-    const onSubmit = (data: RegisterFormInputs) => {
-        mutation.mutate({
-            username: data.username,
-            email: data.email,
-            password: data.password,
-            role: data.role,
-        });
+    const mutation = useMutation(registerService);
+
+    const onSubmit = (data: RegisterFormData) => {
+        mutation.mutate(data);
     };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input type="text" placeholder="Username" {...register('username')} required />
-            <input type="email" placeholder="Email" {...register('email')} required />
-            <input type="password" placeholder="Senha" {...register('password')} required />
-            <select {...register('role')} required>
-                <option value="ALUNO">Aluno</option>
-                <option value="PROFESSOR">Professor</option>
+            <input type="text" {...register('username')} placeholder="Username" />
+            {errors.username && <span>{errors.username.message}</span>}
+
+            <input type="email" {...register('email')} placeholder="Email" />
+            {errors.email && <span>{errors.email.message}</span>}
+
+            <input type="password" {...register('password')} placeholder="Password" />
+            {errors.password && <span>{errors.password.message}</span>}
+
+            <select {...register('role')}>
+                <option value="USER">User</option>
                 <option value="ADMIN">Admin</option>
             </select>
+            {errors.role && <span>{errors.role.message}</span>}
+
             <button type="submit">Register</button>
         </form>
     );

@@ -1,17 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { useDispatch } from 'react-redux';
-import themeReducer from './slices/themeSlice';
-import authReducer from './slices/authSlice';
+import { authSlice } from './slices/authSlice';
+import { themeSlice } from './slices/themeSlice';
 
-export const store = configureStore({
+const store = configureStore({
     reducer: {
-        theme: themeReducer,
-        auth: authReducer,
+        auth: authSlice.reducer,
+        theme: themeSlice.reducer,
     },
 });
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
 
-// Hook
-export const useAppDispatch = () => useDispatch<AppDispatch>();
+export default store;

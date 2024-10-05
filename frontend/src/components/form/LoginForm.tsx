@@ -1,39 +1,41 @@
-import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { loginSchema } from '@/utils/authValidation';
 import { useMutation } from 'react-query';
-import { useRouter } from 'next/router';
-import {loginUser} from "@/api/auth";
-import {loginSuccess} from "@/store/slices/authSlice";
+import { login as loginService } from '../../services/authService';
+import { useDispatch } from 'react-redux';
+import { login } from '@/store/slices/authSlice';
 
-interface LoginFormInputs {
+interface LoginFormData {
     email: string;
     password: string;
 }
 
-const LoginForm: React.FC = () => {
-    const { register, handleSubmit } = useForm<LoginFormInputs>();
-    const dispatch = useDispatch();
-    const router = useRouter();
+const LoginForm = () => {
+    const { register, handleSubmit, formState: { errors } } = useForm<LoginFormData>({
+        resolver: zodResolver(loginSchema),
+    });
 
-    const mutation = useMutation(loginUser, {
+    const dispatch = useDispatch();
+
+    const mutation = useMutation(loginService, {
         onSuccess: (data) => {
-            dispatch(loginSuccess({ token: data.token, username: data.name }));
-            router.push('/dashboard'); // Redireciona após o login
-        },
-        onError: () => {
-            alert('Erro ao logar');
+            dispatch(login({ username: data.username, token: data.token, role: data.role }));
         },
     });
 
-    const onSubmit = (data: LoginFormInputs) => {
-        mutation.mutate({ email: data.email, password: data.password });
+    const onSubmit = (data: LoginFormData) => {
+        mutation.mutate(data);
     };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <input type="email" placeholder="Email" {...register('email')} required />
-            <input type="password" placeholder="Senha" {...register('password')} required />
+            <input type="email" {...register('email')} placeholder="Email" />
+            {errors.email && <span>{errors.email.message}</span>}
+
+            <input type="password" {...register('password')} placeholder="Password" />
+            {errors.password && <span>{errors.password.message}</span>}
+
             <button type="submit">Login</button>
         </form>
     );

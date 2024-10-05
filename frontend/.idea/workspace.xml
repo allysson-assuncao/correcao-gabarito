@@ -4,7 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="674e4b53-a1d7-4cad-ae0d-ff9689a46044" name="Changes" comment="routing working, trying to implement authentication and authorization in sync with backend" />
+    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/forgot-password/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(auth)/register/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/profile/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/links/Links.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/links/link.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/links/navLink/NavLink.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/navbar/links/navLink/navlink.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/authValidation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/auth.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ui/switch.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useFetchData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/slices/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/authSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/slices/themeSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/themeSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,9 +58,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2mmyg2NBHJyEDh1S4V3L6Xrb7st" />
+  <component name="ProjectId" id="2n1Yj6lWUr1nkC30eITYyFv51di" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,12 +69,12 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/anybody/Documents/Projects/correcao-gabarito/frontend&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.Run Frontend.executor&quot;: &quot;Run&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/anybody/Documents/Projects/correcao-gabarito/frontend/node_modules/typescript/lib&quot;,
@@ -48,10 +83,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/src/components/login" />
-      <recent name="$PROJECT_DIR$/src/pages" />
-      <recent name="$PROJECT_DIR$/src/styles" />
+      <recent name="$PROJECT_DIR$/src/components/navbar/links" />
     </key>
   </component>
   <component name="RunManager">
@@ -76,55 +108,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="674e4b53-a1d7-4cad-ae0d-ff9689a46044" name="Changes" comment="" />
-      <created>1727696153324</created>
+      <changelist id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="" />
+      <created>1728142180440</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1727696153324</updated>
-      <workItem from="1727696154311" duration="5498000" />
-      <workItem from="1727708084976" duration="834000" />
-      <workItem from="1727779353932" duration="2200000" />
-      <workItem from="1727781607438" duration="123000" />
+      <updated>1728142180440</updated>
+      <workItem from="1728142181443" duration="2708000" />
+      <workItem from="1728150122210" duration="3870000" />
     </task>
-    <task id="LOCAL-00001" summary="redoing frontend">
-      <option name="closed" value="true" />
-      <created>1727696206162</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1727696206162</updated>
-    </task>
-    <task id="LOCAL-00002" summary="routing problems as expected">
-      <option name="closed" value="true" />
-      <created>1727708911425</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1727708911425</updated>
-    </task>
-    <task id="LOCAL-00003" summary="routing working, trying to implement authentication and authorization in sync with backend">
-      <option name="closed" value="true" />
-      <created>1727781719697</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1727781719697</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/tailwind.config.js" />
-      </list>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="redoing frontend" />
-    <MESSAGE value="routing problems as expected" />
-    <MESSAGE value="routing working, trying to implement authentication and authorization in sync with backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="routing working, trying to implement authentication and authorization in sync with backend" />
   </component>
 </project>

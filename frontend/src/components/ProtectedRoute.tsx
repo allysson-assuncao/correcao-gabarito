@@ -1,35 +1,28 @@
 import { useSelector } from 'react-redux';
-import { RootState } from '@/store';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { ReactNode, useEffect } from 'react';
+import {RootState} from "@/store";
 
 interface ProtectedRouteProps {
-    requiredRole?: 'admin' | 'professor' | 'aluno' | 'guest';
+    children: ReactNode;
+    role?: string;
 }
 
-const ProtectedRoute = (WrappedComponent: React.ComponentType, options?: ProtectedRouteProps) => {
-    const AuthComponent = (props: any) => {
-        const isAuthenticated = useSelector((state: RootState) => state.auth.isAuthenticated);
-        const userRole = useSelector((state: RootState) => state.auth.userRole);
-        const router = useRouter();
+const ProtectedRoute = ({ children, role }: ProtectedRouteProps) => {
+    const { isAuthenticated, role: userRole } = useSelector((state: RootState) => state.auth);
+    const router = useRouter();
 
-        useEffect(() => {
-            if (!isAuthenticated) {
-                router.push('/login');
-            } else if (options?.requiredRole && userRole !== options.requiredRole) {
-                router.push('/unauthorized');
-            }
-        }, [isAuthenticated, userRole, router, options]);
-
-        if (!isAuthenticated || (options?.requiredRole && userRole !== options.requiredRole)) {
-            return null; // Replace with a loading component
+    useEffect(() => {
+        if (!isAuthenticated || (role && userRole !== role)) {
+            router.push('/login');
         }
+    }, [isAuthenticated, role, userRole, router]);
 
-        return <WrappedComponent {...props} />;
-    };
+    if (!isAuthenticated || (role && userRole !== role)) {
+        return null; // Add loading component
+    }
 
-    return AuthComponent;
+    return <>{children}</>;
 };
 
 export default ProtectedRoute;
-
