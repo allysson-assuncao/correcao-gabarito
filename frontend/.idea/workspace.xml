@@ -4,41 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(auth)/forgot-password/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(auth)/register/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/profile/[id]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/links/Links.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/links/link.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/links/navLink/NavLink.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/navbar/links/navLink/navlink.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/authService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/authValidation.ts" afterDir="false" />
+    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component">
+      <change afterPath="$PROJECT_DIR$/src/app/home/admin/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/Auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/States.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/dto/AuthResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/dto/AuthResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/AuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/auth.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/switch.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useFetchData.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/slices/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/authSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/slices/themeSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/themeSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/authValidation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/authValidation.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,11 +92,26 @@
       <option name="presentableId" value="Default" />
       <updated>1728142180440</updated>
       <workItem from="1728142181443" duration="2708000" />
-      <workItem from="1728150122210" duration="3870000" />
+      <workItem from="1728150122210" duration="4283000" />
+      <workItem from="1728214841440" duration="6464000" />
+      <workItem from="1728225232989" duration="753000" />
     </task>
+    <task id="LOCAL-00001" summary="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component">
+      <option name="closed" value="true" />
+      <created>1728154482532</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728154482532</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component" />
+    <option name="LAST_COMMIT_MESSAGE" value="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component" />
   </component>
 </project>

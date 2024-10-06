@@ -3,6 +3,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { registerSchema } from '@/utils/authValidation';
 import { useMutation } from 'react-query';
 import { register as registerService } from '../../services/authService';
+import {useDispatch} from "react-redux";
+import { signup } from '@/store/slices/authSlice';
 
 interface RegisterFormData {
     username: string;
@@ -12,11 +14,19 @@ interface RegisterFormData {
 }
 
 const RegisterForm = () => {
+
+    const dispatch = useDispatch();
+
     const { register, handleSubmit, formState: { errors } } = useForm<RegisterFormData>({
         resolver: zodResolver(registerSchema),
     });
 
-    const mutation = useMutation(registerService);
+    const mutation = useMutation(registerService, {
+        onSuccess: (data) => {
+            console.log(data);
+            dispatch(signup({ username: data.username, token: data.token, role: data.role }));
+        },
+    });
 
     const onSubmit = (data: RegisterFormData) => {
         mutation.mutate(data);
@@ -34,7 +44,8 @@ const RegisterForm = () => {
             {errors.password && <span>{errors.password.message}</span>}
 
             <select {...register('role')}>
-                <option value="USER">User</option>
+                <option value="ALUNO">Aluno</option>
+                <option value="PROFESSOR">Professor</option>
                 <option value="ADMIN">Admin</option>
             </select>
             {errors.role && <span>{errors.role.message}</span>}

@@ -1,7 +1,8 @@
+"use client";
 import { useSelector } from 'react-redux';
-import { useRouter } from 'next/router';
 import { ReactNode, useEffect } from 'react';
 import {RootState} from "@/store";
+import {useRouter} from "next/navigation";
 
 interface ProtectedRouteProps {
     children: ReactNode;
@@ -13,8 +14,14 @@ const ProtectedRoute = ({ children, role }: ProtectedRouteProps) => {
     const router = useRouter();
 
     useEffect(() => {
-        if (!isAuthenticated || (role && userRole !== role)) {
+        if (!isAuthenticated) {
+            console.log(isAuthenticated);
+            console.log("Unauthenticated!")
             router.push('/login');
+        } else if (role && userRole !== role) {
+            console.log(userRole + " " + role);
+            console.log("Unauthorized!")
+            // send back to the last route and show a waring snackbar os smth
         }
     }, [isAuthenticated, role, userRole, router]);
 

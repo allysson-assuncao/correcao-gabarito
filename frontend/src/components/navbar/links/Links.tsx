@@ -7,12 +7,12 @@ import NavLink from "@/components/navbar/links/navLink/NavLink";
 
 const links = [
     {
-        title: "Homepage",
-        path: "/",
+        title: "Home",
+        path: "/home",
     },
     {
-        title: "About",
-        path: "/about",
+        title: "Admin",
+        path: "/home/admin",
     },
     {
         title: "Contact",

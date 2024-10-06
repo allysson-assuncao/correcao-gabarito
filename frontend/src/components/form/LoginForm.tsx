@@ -12,14 +12,16 @@ interface LoginFormData {
 }
 
 const LoginForm = () => {
+
+    const dispatch = useDispatch();
+
     const { register, handleSubmit, formState: { errors } } = useForm<LoginFormData>({
         resolver: zodResolver(loginSchema),
     });
 
-    const dispatch = useDispatch();
-
     const mutation = useMutation(loginService, {
         onSuccess: (data) => {
+            console.log(data);
             dispatch(login({ username: data.username, token: data.token, role: data.role }));
         },
     });

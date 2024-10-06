@@ -41,7 +41,8 @@ public class AuthService {
             this.userRepository.save(newUser);
 
             String token = this.tokenService.generateToken(newUser);
-            return Optional.of(new AuthResponseDTO(newUser.getUsername(), token));
+            System.out.println("Cadastrou com sucesso");
+            return Optional.of(new AuthResponseDTO(newUser.getUsername(), token, newUser.getRole()));
         }
         return Optional.empty();
     }
@@ -50,7 +51,7 @@ public class AuthService {
         User user = this.userRepository.findByEmail(loginRequestDTO.email()).orElseThrow(() -> new UserNotFoundException("User with email " + loginRequestDTO.email() + " not found"));
         if(this.passwordEncoder.matches(loginRequestDTO.password(), user.getPassword())) {
             String token = this.tokenService.generateToken(user);
-            return Optional.of(new AuthResponseDTO(user.getUsername(), token));
+            return Optional.of(new AuthResponseDTO(user.getUsername(), token, user.getRole()));
         }
         throw new InvalidCredentialsException("Invalid credentials");
         /*return Optional.empty();*/
