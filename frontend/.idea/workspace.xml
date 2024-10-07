@@ -5,19 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, routes are protected by authentication and authorization successfully, all auth states being managed nicely">
-      <change afterPath="$PROJECT_DIR$/src/app/home/admin/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/home/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/States.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/dto/AuthResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/dto/AuthResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/theme-provider.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/Links.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/links/Links.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/slices/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/authSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/authValidation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/authValidation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/Links.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/link.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/navLink/NavLink.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/navLink/navlink.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/slices/themeSlice.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +52,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/anybody/Documents/Projects/correcao-gabarito/frontend&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/anybody/Downloads/next-shadcn-dashboard&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -96,6 +100,8 @@
       <workItem from="1728150122210" duration="4283000" />
       <workItem from="1728214841440" duration="6464000" />
       <workItem from="1728225232989" duration="1091000" />
+      <workItem from="1728301266093" duration="5172000" />
+      <workItem from="1728306625506" duration="2831000" />
     </task>
     <task id="LOCAL-00001" summary="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component">
       <option name="closed" value="true" />

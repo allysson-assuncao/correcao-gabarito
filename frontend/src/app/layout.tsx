@@ -1,10 +1,11 @@
 "use client";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/navbar/Navbar";
 import {Provider} from "react-redux";
 import store from "../store";
 import {QueryClient, QueryClientProvider} from "react-query";
+import {ThemeProvider} from "@/components/ui/theme-provider";
+import {Navbar} from "@/components/Navbar/Navbar";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
@@ -21,14 +22,20 @@ const queryClient = new QueryClient();
 
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html lang="en">
-        <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+        <html lang="pt-br">
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Provider store={store}>
             <QueryClientProvider client={queryClient}>
-                <Navbar/>
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="system"
+                    enableSystem
+                    themes={['light-green', 'dark-green', 'light-purple', 'dark-purple']}
+                    disableTransitionOnChange
+                >
+                    <Navbar/>
+                    {children}
+                </ThemeProvider>
             </QueryClientProvider>
         </Provider>
         </body>
