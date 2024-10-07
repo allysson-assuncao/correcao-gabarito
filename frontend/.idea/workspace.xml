@@ -4,24 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, routes are protected by authentication and authorization successfully, all auth states being managed nicely">
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/theme-provider.tsx" afterDir="false" />
+    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, updated navbar, added shadnc ui, implemented themes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/Links.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/link.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/navLink/NavLink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar/links/navLink/navlink.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/slices/themeSlice.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +86,7 @@
       <workItem from="1728214841440" duration="6464000" />
       <workItem from="1728225232989" duration="1091000" />
       <workItem from="1728301266093" duration="5172000" />
-      <workItem from="1728306625506" duration="2831000" />
+      <workItem from="1728306625506" duration="3555000" />
     </task>
     <task id="LOCAL-00001" summary="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component">
       <option name="closed" value="true" />
@@ -119,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728242175590</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="project running apparently fine, updated navbar, added shadnc ui, implemented themes">
+      <option name="closed" value="true" />
+      <created>1728309761095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728309761095</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +121,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component" />
     <MESSAGE value="project running apparently fine, routes are protected by authentication and authorization successfully, all auth states being managed nicely" />
-    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, routes are protected by authentication and authorization successfully, all auth states being managed nicely" />
+    <MESSAGE value="project running apparently fine, updated navbar, added shadnc ui, implemented themes" />
+    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, updated navbar, added shadnc ui, implemented themes" />
   </component>
 </project>
