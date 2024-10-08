@@ -1,15 +1,11 @@
 "use client";
 import { useSelector } from 'react-redux';
-import { ReactNode, useEffect } from 'react';
+import { useEffect } from 'react';
 import {RootState} from "@/store";
 import {useRouter} from "next/navigation";
+import {ProtectedRouteProps} from "@/interfaces/Props";
 
-interface ProtectedRouteProps {
-    children: ReactNode;
-    role?: string;
-}
-
-const ProtectedRoute = ({ children, role }: ProtectedRouteProps) => {
+const ProtectedRoute = ({ children, roles }: ProtectedRouteProps) => {
     const { isAuthenticated, role: userRole } = useSelector((state: RootState) => state.auth);
     const router = useRouter();
 
@@ -18,14 +14,14 @@ const ProtectedRoute = ({ children, role }: ProtectedRouteProps) => {
             console.log(isAuthenticated);
             console.log("Unauthenticated!")
             router.push('/login');
-        } else if (role && userRole !== role) {
-            console.log(userRole + " " + role);
+        } else if (roles && !roles.includes(userRole as 'ADMIN' | 'PROFESSOR' | 'ALUNO')) {
+            console.log(userRole + " " + roles);
             console.log("Unauthorized!")
-            // send back to the last route and show a waring snackbar os smth
+            // Send back to the last route and show a waring snackbar os smth
         }
-    }, [isAuthenticated, role, userRole, router]);
+    }, [isAuthenticated, roles, userRole, router]);
 
-    if (!isAuthenticated || (role && userRole !== role)) {
+    if (!isAuthenticated || (roles && !roles.includes(userRole as 'ADMIN' | 'PROFESSOR' | 'ALUNO'))) {
         return null; // Add loading component
     }
 

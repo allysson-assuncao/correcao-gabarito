@@ -3,12 +3,12 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 interface AuthState {
     username: string;
     token: string | null;
-    role: string | null;
+    role: string;
     isAuthenticated: boolean;
 }
 
 const tokenFromStorage = typeof window !== "undefined" ? localStorage.getItem('token') : null;
-const roleFromStorage = typeof window !== "undefined" ? localStorage.getItem('role') : null;
+const roleFromStorage = typeof window !== "undefined" ? localStorage.getItem('role') ?? '' : '';
 
 const initialState: AuthState = {
     username: '',
@@ -46,7 +46,7 @@ export const authSlice = createSlice({
         logout: (state) => {
             state.username = '';
             state.token = null;
-            state.role = null;
+            state.role = '';
             state.isAuthenticated = false;
 
             // Removing from localStorage

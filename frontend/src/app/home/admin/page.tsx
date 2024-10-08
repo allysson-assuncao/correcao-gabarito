@@ -2,7 +2,7 @@ import ProtectedRoute from '../../../components/ProtectedRoute';
 
 export default function Home() {
     return (
-        <ProtectedRoute role={"ADMIN"}>
+        <ProtectedRoute roles={["ADMIN"]}>
             <div>Admin home</div>
         </ProtectedRoute>
     );
