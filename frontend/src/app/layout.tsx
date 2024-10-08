@@ -5,7 +5,7 @@ import {Provider} from "react-redux";
 import store from "../store";
 import {QueryClient, QueryClientProvider} from "react-query";
 import {ThemeProvider} from "@/components/ui/theme-provider";
-import {Navbar} from "@/components/Navbar/Navbar";
+import {Navbar} from "@/components/navbar/Navbar";
 
 const geistSans = localFont({
     src: "./fonts/GeistVF.woff",
