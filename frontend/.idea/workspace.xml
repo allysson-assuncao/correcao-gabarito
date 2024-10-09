@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, improved the forms and toggles a bit">
+    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, logging inheriting width and height correctly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,16 +25,8 @@
       </list>
     </option>
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="false" />
-    <option name="myAllFileTypesSelected" value="true" />
-    <option name="mySelectedFileTypes">
-      <set />
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -57,7 +48,8 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.Run Frontend.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/anybody/Documents/Projects/correcao-gabarito/frontend/node_modules/typescript/lib&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\0063398\\Documents\\Projects\\correcao-gabarito\\frontend\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -102,8 +94,8 @@
       <workItem from="1728324478145" duration="1608000" />
       <workItem from="1728326328369" duration="497000" />
       <workItem from="1728326868109" duration="12000" />
-      <workItem from="1728381344829" duration="9285000" />
-      <workItem from="1728404110680" duration="2324000" />
+      <workItem from="1728381344829" duration="9124000" />
+      <workItem from="1728432077404" duration="1301000" />
     </task>
     <task id="LOCAL-00001" summary="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component">
       <option name="closed" value="true" />
@@ -137,13 +129,13 @@
       <option name="project" value="LOCAL" />
       <updated>1728310669721</updated>
     </task>
-    <task id="LOCAL-00005" summary="project running apparently fine, improved the forms and toggles a bit">
+    <task id="LOCAL-00005" summary="project running apparently fine, logging inheriting width and height correctly">
       <option name="closed" value="true" />
-      <created>1728392139973</created>
+      <created>1728429762600</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1728392139973</updated>
+      <updated>1728429762600</updated>
     </task>
     <option name="localTasksCounter" value="6" />
     <servers />
@@ -156,7 +148,7 @@
     <MESSAGE value="project running apparently fine, routes are protected by authentication and authorization successfully, all auth states being managed nicely" />
     <MESSAGE value="project running apparently fine, updated navbar, added shadnc ui, implemented themes" />
     <MESSAGE value="project running apparently fine, managed to split the mode and color change in theme, needs some work yet" />
-    <MESSAGE value="project running apparently fine, improved the forms and toggles a bit" />
-    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, improved the forms and toggles a bit" />
+    <MESSAGE value="project running apparently fine, logging inheriting width and height correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, logging inheriting width and height correctly" />
   </component>
 </project>

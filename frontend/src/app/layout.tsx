@@ -23,7 +23,8 @@ const queryClient = new QueryClient();
 export default function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
         <html lang="pt-br">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/*<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>*/}
+        <body className={"h-screen flex flex-col"}>
         <Provider store={store}>
             <QueryClientProvider client={queryClient}>
                 <ThemeProvider
@@ -33,13 +34,11 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                     themes={['light-green', 'dark-green', 'light-purple', 'dark-purple']}
                     disableTransitionOnChange
                 >
-                    <div className={"wrapper h-full"}>
-                        <div>
-                            <Navbar/>
-                        </div>
-                        <div>
-                            {children}
-                        </div>
+                    <div className={"h-[15vh]"}>
+                        <Navbar/>
+                    </div>
+                    <div className={"flex-grow h-[85vh]"}>
+                        {children}
                     </div>
                 </ThemeProvider>
             </QueryClientProvider>
