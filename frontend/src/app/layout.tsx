@@ -31,10 +31,10 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                     attribute="class"
                     defaultTheme="system"
                     enableSystem
-                    themes={['light-green', 'dark-green', 'light-purple', 'dark-purple']}
+                    themes={['light-green', 'dark-green', 'light-blue', 'dark-blue', 'light-purple', 'dark-purple', 'light-red', 'dark-red', 'light-gray', 'dark-gray', 'light-orange', 'dark-orange', 'light-yellow', 'dark-yellow']}
                     disableTransitionOnChange
                 >
-                    <div className={"h-[15vh]"}>
+                    <div className={"h-[10vh]"}>
                         <Navbar/>
                     </div>
                     <div className={"flex-grow h-[85vh]"}>

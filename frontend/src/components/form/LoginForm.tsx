@@ -10,6 +10,9 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Button} from "@/components/ui/button";
 import {Icons} from "@/public/icons";
 import {Input} from "@/components/ui/input";
+import Link from "next/link";
+import {DividerHorizontalIcon} from "@radix-ui/react-icons";
+import {Divide} from "lucide-react";
 
 interface LoginFormData {
     email: string;
@@ -36,7 +39,7 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="flex h-full justify-center items-baseline"> {/*items-center*/}
+        <div className="flex h-full justify-center items-baseline mt-10">
             <Card className={"w-1/2"}>
                 <CardHeader className="space-y-1">
                     <CardTitle className="text-2xl">Login</CardTitle>
@@ -80,8 +83,13 @@ const LoginForm = () => {
                     </div>
 
                 </CardContent>
-                <CardFooter>
-                    {/* Link to register page */}
+                <CardFooter className={"justify-center"}>
+                    <Link
+                        href="/register"
+                        className={"text-sm font-medium transition-colors hover:text-primary"}
+                    >
+                        Crie uma conta
+                    </Link>
                 </CardFooter>
             </Card>
         </div>

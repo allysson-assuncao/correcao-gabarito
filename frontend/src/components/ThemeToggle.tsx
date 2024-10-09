@@ -55,14 +55,14 @@ export function ThemeToggle() {
     }, [mode, color, setTheme, isMounted, themes])
 
     return (
-        <div className="flex gap-4 items-center">
+        <div className={"flex gap-4 items-center"}>
             <Button variant="outline" size="icon" onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}>
                 {mode === 'light' ? (
-                    <SunIcon className="h-[1.2rem] w-[1.2rem]" />
+                    <SunIcon className={"h-[1.2rem] w-[1.2rem]"} />
                 ) : (
-                    <MoonIcon className="h-[1.2rem] w-[1.2rem]" />
+                    <MoonIcon className={"h-[1.2rem] w-[1.2rem]"} />
                 )}
-                <span className="sr-only">Alternar tema</span>
+                <span className={"sr-only"}>Alternar tema</span>
             </Button>
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -79,7 +79,7 @@ export function ThemeToggle() {
                     {colors.map(c => (
                         <DropdownMenuItem key={c.name} onClick={() => setColor(c.name)}>
                             <span
-                                className="block h-4 w-4 rounded-full mr-2"
+                                className={"block h-4 w-4 rounded-full mr-2"}
                                 style={{ backgroundColor: c.hex }}
                             />
                             {c.label.charAt(0).toUpperCase() + c.label.slice(1)}
