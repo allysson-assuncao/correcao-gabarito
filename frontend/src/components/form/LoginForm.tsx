@@ -10,6 +10,7 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} f
 import {Button} from "@/components/ui/button";
 import {Icons} from "@/public/icons";
 import {Input} from "@/components/ui/input";
+import {useRouter} from "next/navigation";
 
 interface LoginFormData {
     email: string;
@@ -18,6 +19,7 @@ interface LoginFormData {
 
 const LoginForm = () => {
 
+    const router = useRouter();
     const dispatch = useDispatch();
 
     const {register, handleSubmit, formState: {errors}} = useForm<LoginFormData>({
@@ -28,6 +30,7 @@ const LoginForm = () => {
         onSuccess: (data) => {
             console.log(data);
             dispatch(login({username: data.username, token: data.token, role: data.role}));
+            router.push('/home');
         },
     });
 
@@ -36,7 +39,7 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="flex justify-center items-center h-full">
+        <div className="flex justify-center content-center h-full">
             <Card className={"w-1/2"}>
                 <CardHeader className="space-y-1">
                     <CardTitle className="text-2xl">Login</CardTitle>

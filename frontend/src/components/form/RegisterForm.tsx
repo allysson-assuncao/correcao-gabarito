@@ -5,6 +5,7 @@ import { useMutation } from 'react-query';
 import { register as registerService } from '../../services/authService';
 import {useDispatch} from "react-redux";
 import { signup } from '@/store/slices/authSlice';
+import {useRouter} from "next/navigation";
 
 interface RegisterFormData {
     username: string;
@@ -15,6 +16,7 @@ interface RegisterFormData {
 
 const RegisterForm = () => {
 
+    const router = useRouter();
     const dispatch = useDispatch();
 
     const { register, handleSubmit, formState: { errors } } = useForm<RegisterFormData>({
@@ -25,6 +27,7 @@ const RegisterForm = () => {
         onSuccess: (data) => {
             console.log(data);
             dispatch(signup({ username: data.username, token: data.token, role: data.role }));
+            router.push('/home');
         },
     });
 

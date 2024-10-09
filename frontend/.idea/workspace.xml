@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, managed to split the mode and color change in theme, needs some work yet">
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Props.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/public/icons.tsx" afterDir="false" />
+    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, improved the forms and toggles a bit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/register/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/register/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/admin/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/admin/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProtectedRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ThemeToggle.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/LoginForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/States.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/States.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/slices/authSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/slices/authSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +35,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -108,7 +102,8 @@
       <workItem from="1728324478145" duration="1608000" />
       <workItem from="1728326328369" duration="497000" />
       <workItem from="1728326868109" duration="12000" />
-      <workItem from="1728381344829" duration="9124000" />
+      <workItem from="1728381344829" duration="9285000" />
+      <workItem from="1728404110680" duration="2324000" />
     </task>
     <task id="LOCAL-00001" summary="redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component">
       <option name="closed" value="true" />
@@ -142,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728310669721</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="project running apparently fine, improved the forms and toggles a bit">
+      <option name="closed" value="true" />
+      <created>1728392139973</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728392139973</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +156,7 @@
     <MESSAGE value="project running apparently fine, routes are protected by authentication and authorization successfully, all auth states being managed nicely" />
     <MESSAGE value="project running apparently fine, updated navbar, added shadnc ui, implemented themes" />
     <MESSAGE value="project running apparently fine, managed to split the mode and color change in theme, needs some work yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, managed to split the mode and color change in theme, needs some work yet" />
+    <MESSAGE value="project running apparently fine, improved the forms and toggles a bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, improved the forms and toggles a bit" />
   </component>
 </project>

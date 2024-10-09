@@ -33,11 +33,13 @@ export default function RootLayout({children,}: Readonly<{ children: React.React
                     themes={['light-green', 'dark-green', 'light-purple', 'dark-purple']}
                     disableTransitionOnChange
                 >
-                    <div>
-                        <Navbar/>
-                    </div>
-                    <div className={"h-full w-full"}>
-                        {children}
+                    <div className={"wrapper h-full"}>
+                        <div>
+                            <Navbar/>
+                        </div>
+                        <div>
+                            {children}
+                        </div>
                     </div>
                 </ThemeProvider>
             </QueryClientProvider>
