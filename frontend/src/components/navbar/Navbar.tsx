@@ -56,7 +56,7 @@ const components: { title: string; href: string; description: string }[] = [
 export function Navbar() {
     return (
         <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList>intel
                 <NavigationMenuItem>
 
                     <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>

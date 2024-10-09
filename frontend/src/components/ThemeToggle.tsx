@@ -14,16 +14,17 @@ import {
 import { useEffect, useState } from "react"
 
 export function ThemeToggle() {
+
     const { setTheme, themes } = useTheme()
 
-    const modes = [
-        'light',
-        'dark',
-    ]
-
     const colors = [
-        { name: 'green', hex: '#4CAF50' },  // Adicionando código hexadecimal
-        { name: 'purple', hex: '#9C27B0' },
+        { name: 'green', hex: '#22c55e', label: 'verde' },
+        { name: 'blue', hex: '#3b82f6', label: 'azul' },
+        { name: 'purple', hex: '#6d28d9', label: 'roxo' },
+        { name: 'red', hex: '#dc2626', label: 'vermelho' },
+        { name: 'gray', hex: '#4b5563', label: 'cinza' },
+        { name: 'orange', hex: '#ea580c', label: 'laranja' },
+        { name: 'yellow', hex: '#facc15', label: 'amarelo' },
     ]
 
     const [mode, setMode] = useState<string>('light')
@@ -31,10 +32,9 @@ export function ThemeToggle() {
     const [isMounted, setIsMounted] = useState<boolean>(false)
 
     useEffect(() => {
-        // Marque o componente como montado no cliente
+
         setIsMounted(true)
 
-        // Verifique se o localStorage está disponível antes de acessá-lo
         const savedMode = typeof window !== 'undefined' ? localStorage.getItem('mode') : null
         const savedColor = typeof window !== 'undefined' ? localStorage.getItem('color') : null
 
@@ -56,7 +56,6 @@ export function ThemeToggle() {
 
     return (
         <div className="flex gap-4 items-center">
-            {/* Botão de Alternar Tema */}
             <Button variant="outline" size="icon" onClick={() => setMode(mode === 'light' ? 'dark' : 'light')}>
                 {mode === 'light' ? (
                     <SunIcon className="h-[1.2rem] w-[1.2rem]" />
@@ -65,16 +64,15 @@ export function ThemeToggle() {
                 )}
                 <span className="sr-only">Alternar tema</span>
             </Button>
-
-            {/* Dropdown para Seleção de Cores */}
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button variant="outline" className="flex items-center">
+                        Cor:
+                        <div className={"pr-2"}></div>
                         <span
                             className="block h-4 w-4 rounded-full mr-2"
                             style={{ backgroundColor: colors.find(c => c.name === color)?.hex }}
                         />
-                        Cor: {color.charAt(0).toUpperCase() + color.slice(1)}
                     </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
@@ -84,7 +82,7 @@ export function ThemeToggle() {
                                 className="block h-4 w-4 rounded-full mr-2"
                                 style={{ backgroundColor: c.hex }}
                             />
-                            {c.name.charAt(0).toUpperCase() + c.name.slice(1)}
+                            {c.label.charAt(0).toUpperCase() + c.label.slice(1)}
                         </DropdownMenuItem>
                     ))}
                 </DropdownMenuContent>

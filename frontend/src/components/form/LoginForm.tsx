@@ -36,7 +36,7 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="flex h-full justify-center items-center"> {/*items-center*/}
+        <div className="flex h-full justify-center items-baseline"> {/*items-center*/}
             <Card className={"w-1/2"}>
                 <CardHeader className="space-y-1">
                     <CardTitle className="text-2xl">Login</CardTitle>
