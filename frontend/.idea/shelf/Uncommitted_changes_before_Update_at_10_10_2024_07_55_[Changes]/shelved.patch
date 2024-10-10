@@ -1,0 +1,94 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"ab5f979c-dfbd-4f82-b58b-ba20548be389\" name=\"Changes\" comment=\"project running apparently fine, improved the forms and toggles a bit\">\n      <change afterPath=\"$PROJECT_DIR$/src/app/logo.webp\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/components/navbar/avatar-dropdown/avatar-dropdown.tsx\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/package-lock.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/package-lock.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/package.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/package.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/navbar/Navbar.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/navbar/Navbar.tsx\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/navbar/combobox/Combobox.tsx\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n        <option value=\"TypeScript File\" />\n        <option value=\"TypeScript JSX File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 6\n}</component>\n  <component name=\"ProjectId\" id=\"2n1Yj6lWUr1nkC30eITYyFv51di\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"last_opened_file_path\": \"/home/anybody/Documents/Projects/correcao-gabarito/frontend/src/app\",\n    \"list.type.of.created.stylesheet\": \"CSS\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"npm.Run Frontend.executor\": \"Run\",\n    \"settings.editor.selected.configurable\": \"preferences.pluginManager\",\n    \"ts.external.directory.path\": \"/home/anybody/Documents/Projects/correcao-gabarito/frontend/node_modules/typescript/lib\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/app\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/components/navbar/links\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Run Frontend\" type=\"js.build_tools.npm\">\n      <package-json value=\"$PROJECT_DIR$/package.json\" />\n      <command value=\"run\" />\n      <scripts>\n        <script value=\"dev\" />\n      </scripts>\n      <node-interpreter value=\"project\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.23339.15\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"ab5f979c-dfbd-4f82-b58b-ba20548be389\" name=\"Changes\" comment=\"\" />\n      <created>1728142180440</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1728142180440</updated>\n      <workItem from=\"1728142181443\" duration=\"2708000\" />\n      <workItem from=\"1728150122210\" duration=\"4283000\" />\n      <workItem from=\"1728214841440\" duration=\"6464000\" />\n      <workItem from=\"1728225232989\" duration=\"1091000\" />\n      <workItem from=\"1728301266093\" duration=\"5172000\" />\n      <workItem from=\"1728306625506\" duration=\"4071000\" />\n      <workItem from=\"1728324478145\" duration=\"1608000\" />\n      <workItem from=\"1728326328369\" duration=\"497000\" />\n      <workItem from=\"1728326868109\" duration=\"12000\" />\n      <workItem from=\"1728381344829\" duration=\"9124000\" />\n      <workItem from=\"1728432077404\" duration=\"1301000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728154482532</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728154482532</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"project running apparently fine, routes are protected by authentication and authorization successfully, all auth states being managed nicely\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728242175590</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728242175590</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"project running apparently fine, updated navbar, added shadnc ui, implemented themes\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728309761095</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728309761095</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"project running apparently fine, managed to split the mode and color change in theme, needs some work yet\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728310669721</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728310669721</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"project running apparently fine, logging inheriting width and height correctly\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728429762600</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728429762600</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"6\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"redoing frontend again, routing working (gotta check authentication and authorization protection), appears to be running fine, minor error with navlink component\" />\n    <MESSAGE value=\"project running apparently fine, routes are protected by authentication and authorization successfully, all auth states being managed nicely\" />\n    <MESSAGE value=\"project running apparently fine, updated navbar, added shadnc ui, implemented themes\" />\n    <MESSAGE value=\"project running apparently fine, managed to split the mode and color change in theme, needs some work yet\" />\n    <MESSAGE value=\"project running apparently fine, logging inheriting width and height correctly\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"project running apparently fine, logging inheriting width and height correctly\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 47370d0cd35684b10c41708c8578d632cbb07968)
++++ b/.idea/workspace.xml	(date 1728557745988)
+@@ -4,15 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, improved the forms and toggles a bit">
+-      <change afterPath="$PROJECT_DIR$/src/app/logo.webp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/components/navbar/avatar-dropdown/avatar-dropdown.tsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar/Navbar.tsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/navbar/combobox/Combobox.tsx" beforeDir="false" />
+-    </list>
++    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, changing the navbar" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -38,23 +30,23 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
+-    "last_opened_file_path": "/home/anybody/Documents/Projects/correcao-gabarito/frontend/src/app",
+-    "list.type.of.created.stylesheet": "CSS",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "npm.Run Frontend.executor": "Run",
+-    "settings.editor.selected.configurable": "preferences.pluginManager",
+-    "ts.external.directory.path": "/home/anybody/Documents/Projects/correcao-gabarito/frontend/node_modules/typescript/lib",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/home/anybody/Documents/Projects/correcao-gabarito/frontend/src/app&quot;,
++    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;npm.Run Frontend.executor&quot;: &quot;Run&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;/home/anybody/Documents/Projects/correcao-gabarito/frontend/node_modules/typescript/lib&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/src/app" />
+@@ -142,7 +134,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1728429762600</updated>
+     </task>
+-    <option name="localTasksCounter" value="6" />
++    <task id="LOCAL-00006" summary="project running apparently fine, changing the navbar">
++      <option name="closed" value="true" />
++      <created>1728489107440</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1728489107440</updated>
++    </task>
++    <option name="localTasksCounter" value="7" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -154,6 +154,7 @@
+     <MESSAGE value="project running apparently fine, updated navbar, added shadnc ui, implemented themes" />
+     <MESSAGE value="project running apparently fine, managed to split the mode and color change in theme, needs some work yet" />
+     <MESSAGE value="project running apparently fine, logging inheriting width and height correctly" />
+-    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, logging inheriting width and height correctly" />
++    <MESSAGE value="project running apparently fine, changing the navbar" />
++    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, changing the navbar" />
+   </component>
+ </project>
+\ No newline at end of file

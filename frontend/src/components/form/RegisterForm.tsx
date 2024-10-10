@@ -11,6 +11,15 @@ import {Button} from "@/components/ui/button";
 import {Icons} from "@/public/icons";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue
+} from "@/components/ui/select";
 
 interface RegisterFormData {
     username: string;
@@ -64,31 +73,23 @@ const RegisterForm = () => {
                             <Input type="password" {...register('password')}/>
                             {errors.password && <span>{errors.password.message}</span>}
 
-                            {/*npx shadcn@latest add select*/}
-                            {/*<Select>
-                                <SelectTrigger className="w-[180px]">
-                                    <SelectValue placeholder="Select a fruit" />
+                            <Label htmlFor="role">Cargo</Label>
+                            <Select>
+                                <SelectTrigger className="w-[180px]" {...register('role')}>
+                                    <SelectValue placeholder="Você é: " />
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup>
-                                        <SelectLabel>Fruits</SelectLabel>
-                                        <SelectItem value="apple">Apple</SelectItem>
-                                        <SelectItem value="banana">Banana</SelectItem>
-                                        <SelectItem value="blueberry">Blueberry</SelectItem>
-                                        <SelectItem value="grapes">Grapes</SelectItem>
-                                        <SelectItem value="pineapple">Pineapple</SelectItem>
+                                        <SelectLabel>Você é: </SelectLabel>
+                                        <SelectItem value="ALUNO">Aluno</SelectItem>
+                                        <SelectItem value="PROFESSOR">Professor</SelectItem>
+                                        <SelectItem value="ADMIN">Admin</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
-                            </Select>*/}
-
-                            <select {...register('role')}>
-                                <option value="ALUNO">Aluno</option>
-                                <option value="PROFESSOR">Professor</option>
-                                <option value="ADMIN">Admin</option>
-                            </select>
+                            </Select>
                             {errors.role && <span>{errors.role.message}</span>}
 
-                            <button type="submit">Cadastro</button>
+                            <Button className="w-full justify-center" type="submit">Cadastrar</Button>
                         </div>
                     </form>
                     <div className="relative">
