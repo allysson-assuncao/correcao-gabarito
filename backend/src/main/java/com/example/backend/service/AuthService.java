@@ -3,6 +3,7 @@ package com.example.backend.service;
 import com.example.backend.dto.AuthResponseDTO;
 import com.example.backend.dto.LoginRequestDTO;
 import com.example.backend.dto.RegisterRequestDTO;
+import com.example.backend.exceptions.EmailAlreadyExistsException;
 import com.example.backend.exceptions.InvalidCredentialsException;
 import com.example.backend.exceptions.UserNotFoundException;
 import com.example.backend.infra.security.TokenService;
@@ -31,20 +32,20 @@ public class AuthService {
     public Optional<AuthResponseDTO> register(RegisterRequestDTO registerRequestDTO) {
         Optional<User> user = this.userRepository.findByEmail(registerRequestDTO.email());
 
-        if(user.isEmpty()) {
-            User newUser = User.builder()
-                    .email(registerRequestDTO.email())
-                    .username(registerRequestDTO.username())
-                    .password(passwordEncoder.encode(registerRequestDTO.password()))
-                    .role(registerRequestDTO.role())
-                    .build();
-            this.userRepository.save(newUser);
-
-            String token = this.tokenService.generateToken(newUser);
-            System.out.println("Cadastrou com sucesso");
-            return Optional.of(new AuthResponseDTO(newUser.getUsername(), token, newUser.getRole()));
+        if (user.isPresent()) {
+            throw new EmailAlreadyExistsException(registerRequestDTO.email());
         }
-        return Optional.empty();
+
+        User newUser = User.builder()
+                .email(registerRequestDTO.email())
+                .username(registerRequestDTO.username())
+                .password(passwordEncoder.encode(registerRequestDTO.password()))
+                .role(registerRequestDTO.role())
+                .build();
+        this.userRepository.save(newUser);
+
+        String token = this.tokenService.generateToken(newUser);
+        return Optional.of(new AuthResponseDTO(newUser.getUsername(), token, newUser.getRole()));
     }
 
     public Optional<AuthResponseDTO> login(LoginRequestDTO loginRequestDTO) {

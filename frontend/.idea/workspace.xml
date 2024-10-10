@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="project running apparently fine, improved the forms and toggles a bit">
+    <list default="true" id="ab5f979c-dfbd-4f82-b58b-ba20548be389" name="Changes" comment="fixed select and improved register form">
+      <change afterPath="$PROJECT_DIR$/../backend/src/main/java/com/example/backend/exceptions/CustomAuthenticationEntryPoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/RegisterForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728429762600</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixed select and improved register form">
+      <option name="closed" value="true" />
+      <created>1728558194156</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728558194156</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +159,7 @@
     <MESSAGE value="project running apparently fine, updated navbar, added shadnc ui, implemented themes" />
     <MESSAGE value="project running apparently fine, managed to split the mode and color change in theme, needs some work yet" />
     <MESSAGE value="project running apparently fine, logging inheriting width and height correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="project running apparently fine, logging inheriting width and height correctly" />
+    <MESSAGE value="fixed select and improved register form" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed select and improved register form" />
   </component>
 </project>

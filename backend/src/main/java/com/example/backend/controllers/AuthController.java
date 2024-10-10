@@ -4,6 +4,7 @@ import com.example.backend.dto.AuthResponseDTO;
 import com.example.backend.dto.LoginRequestDTO;
 import com.example.backend.dto.RegisterRequestDTO;
 import com.example.backend.service.AuthService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,7 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/login")
-    public ResponseEntity<AuthResponseDTO> login(@RequestBody /*@Valid*/ LoginRequestDTO loginRequestDTO){
+    public ResponseEntity<AuthResponseDTO> login(@RequestBody @Valid LoginRequestDTO loginRequestDTO){
         Optional<AuthResponseDTO> optionalAuthResponseDTO = this.authService.login(loginRequestDTO);
         return optionalAuthResponseDTO.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.badRequest().build());
         /*if(optionalAuthResponseDTO.isPresent()){
@@ -31,7 +32,7 @@ public class AuthController {
 
 
     @PostMapping("/register")
-    public ResponseEntity<AuthResponseDTO> register(@RequestBody RegisterRequestDTO registerRequestDTO){
+    public ResponseEntity<AuthResponseDTO> register(@RequestBody @Valid RegisterRequestDTO registerRequestDTO){
         Optional<AuthResponseDTO> optionalAuthResponseDTO = this.authService.register(registerRequestDTO);
         return optionalAuthResponseDTO.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.badRequest().build());
         /*if(optionalAuthResponseDTO.isPresent()){
