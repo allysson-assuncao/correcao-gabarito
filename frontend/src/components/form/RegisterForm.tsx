@@ -33,9 +33,13 @@ const RegisterForm = () => {
     const router = useRouter();
     const dispatch = useDispatch();
 
-    const {register, handleSubmit, formState: {errors}} = useForm<RegisterFormData>({
+    const {register, handleSubmit, setValue, formState: {errors}} = useForm<RegisterFormData>({
         resolver: zodResolver(registerSchema),
     });
+
+    const handleRoleChange = (value: string) => {
+        setValue('role', value);
+    };
 
     const mutation = useMutation(registerService, {
         onSuccess: (data) => {
@@ -63,18 +67,18 @@ const RegisterForm = () => {
                         <div className="grid gap-2">
                             <Label htmlFor="username">Nome de usuário</Label>
                             <Input type="text" {...register('username')}/>
-                            {errors.username && <span>{errors.username.message}</span>}
+                            {errors.username && <span className={"span-error"}>{errors.username.message}</span>}
 
                             <Label htmlFor="email">Email</Label>
                             <Input type="email" {...register('email')} placeholder="exemplo@gmail.com"/>
-                            {errors.email && <span>{errors.email.message}</span>}
+                            {errors.email && <span className={"span-error"}>{errors.email.message}</span>}
 
                             <Label htmlFor="password">Senha</Label>
                             <Input type="password" {...register('password')}/>
-                            {errors.password && <span>{errors.password.message}</span>}
+                            {errors.password && <span className={"span-error"}>{errors.password.message}</span>}
 
                             <Label htmlFor="role">Cargo</Label>
-                            <Select>
+                            <Select onValueChange={handleRoleChange}>
                                 <SelectTrigger className="w-[180px]" {...register('role')}>
                                     <SelectValue placeholder="Você é: " />
                                 </SelectTrigger>
@@ -87,7 +91,7 @@ const RegisterForm = () => {
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
-                            {errors.role && <span>{errors.role.message}</span>}
+                            {errors.role && <span className={"span-error"}>{errors.role.message}</span>}
 
                             <Button className="w-full justify-center" type="submit">Cadastrar</Button>
                         </div>

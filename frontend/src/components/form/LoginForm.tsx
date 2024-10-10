@@ -11,8 +11,8 @@ import {Button} from "@/components/ui/button";
 import {Icons} from "@/public/icons";
 import {Input} from "@/components/ui/input";
 import Link from "next/link";
-import {DividerHorizontalIcon} from "@radix-ui/react-icons";
-import {Divide} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
+import {AxiosError} from "axios";
 
 interface LoginFormData {
     email: string;
@@ -29,8 +29,29 @@ const LoginForm = () => {
 
     const mutation = useMutation(loginService, {
         onSuccess: (data) => {
-            console.log(data);
-            dispatch(login({username: data.username, token: data.token, role: data.role}));
+            dispatch(login({ username: data.username, token: data.token, role: data.role }));
+
+            toast({
+                title: 'Login realizado com sucesso!',
+                description: `Bem-vindo, ${data.username}!`,
+                variant: 'default',
+            });
+        },
+        onError: (error: unknown) => {
+            console.log("Tentei");
+            if (error instanceof AxiosError) {
+                toast({
+                    title: 'Erro ao fazer login',
+                    description: error.response?.data?.message || 'Ocorreu um erro inesperado.',
+                    variant: 'destructive',
+                });
+            } else {
+                toast({
+                    title: 'Erro ao fazer login',
+                    description: 'Ocorreu um erro inesperado.',
+                    variant: 'destructive',
+                });
+            }
         },
     });
 
@@ -52,11 +73,11 @@ const LoginForm = () => {
                         <div className="grid gap-2">
                             <Label htmlFor="email">Email</Label>
                             <Input type="email" {...register('email')} placeholder="exemplo@gmail.com"/>
-                            {errors.email && <span>{errors.email.message}</span>}
+                            {errors.email && <span className={"span-error"}>{errors.email.message}</span>}
 
                             <Label htmlFor="password">Senha</Label>
                             <Input type="password" {...register('password')}/>
-                            {errors.password && <span>{errors.password.message}</span>}
+                            {errors.password && <span className={"span-error"}>{errors.password.message}</span>}
 
                             <Button className="w-full justify-center" type="submit">Login</Button>
                         </div>
